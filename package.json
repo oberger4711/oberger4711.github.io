@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oberger4711/website.git"
+  },
+  "author": "Ole Berger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oberger4711/website/issues"
+  },
+  "homepage": "https://github.com/oberger4711/website#readme"
+}
