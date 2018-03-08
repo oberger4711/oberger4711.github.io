@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/oberger4711/website/issues"
   },
-  "homepage": "https://github.com/oberger4711/website#readme"
+  "homepage": "https://github.com/oberger4711/website#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
 }
