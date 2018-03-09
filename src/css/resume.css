@@ -1,5 +1,8 @@
+body {
+	background-color: #fdf6e3;
+}
 h1, h2, h3, h4, h5, h6 {
-//font-family: 'Slabo 27px', serif;
-font-family: 'Inconsolata', monospace;
-//font-family: 'VT323', monospace;
+	//font-family: 'Slabo 27px', serif;
+	font-family: 'Inconsolata', monospace;
+	//font-family: 'VT323', monospace;
 }
