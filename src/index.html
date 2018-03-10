@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Bootstrap Example</title>
+		<title>Ole Berger</title>
 		<meta charset="utf-8">
 		<!-- Bootstrap stuff -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,22 +10,21 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" href="css/resume.css">
-		<link rel="stylesheet" href="css/solarized.css">
-		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
 		<style>
 		</style>
 	</head>
 	<body>
-
-		<header class="resume-header">
-		</header>
-
-		<div class="container text-center">
-			<h1 class="text-right" href="#">Ole Berger</h1>
-			<a class="p-2" href="#">Home</a>
-			<a class="p-2" href="#">Projects</a>
-			<a class="p-2" href="#">Contact</a>
+        <div class="container" id="nav_bar">
 		</div>
+        <script>
+            $(document).ready(function() {
+                $("#nav_bar").load("navbar.html");
+                $(document).ready(function() {
+                    $("#nav_home").addClass("active"); // Highlight the current menu entry.
+                });
+            });
+        </script>
 
 		<hr />
 

@@ -1,2 +1,2 @@
 #!/bin/bash
-sass --watch src/scss/solarized.scss:src/css/solarized.css
+sass --watch src/scss/resume.scss:src/css/resume.css
