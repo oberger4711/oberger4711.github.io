@@ -1,36 +1,40 @@
 /* light is default mode, so pair with general html definition */
-html *, .light * {
-  color: #657b83; }
-html body, .light body {
+.light * {
+  color: #657b83;
+  border-color: #657b83; }
+.light body {
   background-color: #fdf6e3; }
-html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-  color: #586e75;
-  border-color: #657b83;
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  color: #b58900;
   font-family: 'Inconsolata', monospace; }
-html a, html a:active, html a:visited, .light a, .light a:active, .light a:visited {
+.light h2 {
+  border-bottom: 1px solid #657b83; }
+.light a, .light a:active, .light a:visited {
   color: #586e75; }
-html a.active, .light a.active {
+.light a.active {
   color: #b58900; }
-html a:hover, .light a:hover {
+.light a:hover {
   background-color: #eee8d5; }
-html .jumbotron, .light .jumbotron {
+.light .jumbotron {
   background-color: #eee8d5; }
 
-.dark * {
-  color: #839496; }
-.dark body {
+html *, .dark * {
+  color: #839496;
+  border-color: #839496; }
+html body, .dark body {
   background-color: #002b36; }
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: #93a1a1;
-  border-color: #839496;
+html h1, html h2, html h3, html h4, html h5, html h6, .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #268bd2;
   font-family: 'Inconsolata', monospace; }
-.dark a, .dark a:active, .dark a:visited {
+html h2, .dark h2 {
+  border-bottom: 1px solid #839496; }
+html a, html a:active, html a:visited, .dark a, .dark a:active, .dark a:visited {
   color: #93a1a1; }
-.dark a.active {
-  color: #b58900; }
-.dark a:hover {
+html a.active, .dark a.active {
+  color: #268bd2; }
+html a:hover, .dark a:hover {
   background-color: #073642; }
-.dark .jumbotron {
+html .jumbotron, .dark .jumbotron {
   background-color: #073642; }
 
 html * {

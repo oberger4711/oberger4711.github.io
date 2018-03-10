@@ -15,39 +15,44 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
+@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3,$highlight) 
 {
     * {
         color:$rebase0;
+        border-color:$rebase0;
     }
     body {
         background-color:$rebase03;
     }
     h1,h2,h3,h4,h5,h6 {
-        color:$rebase1;
-        border-color: $rebase0;
+        color:$highlight;
         //font-family: 'Slabo 27px', serif;
         font-family: 'Inconsolata', monospace;
         //font-family: 'VT323', monospace;
+    }
+    h2 {
+        border-bottom:1px solid $rebase0;
     }
     a, a:active, a:visited {
         color: $rebase1;
     }
     a.active {
-        color: $yellow;
+        color: $highlight;
     }
     a:hover {
-        background-color: $rebase02; }
-        .jumbotron { background-color: $rebase02;
+        background-color: $rebase02;
+    }
+    .jumbotron {
+        background-color: $rebase02;
     }
 }
 
 /* light is default mode, so pair with general html definition */
-html, .light {
-    @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
+.light {
+    @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03,$yellow);
 }
-.dark  {
-    @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
+html, .dark  {
+    @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3,$blue);
 }
 html * {
     color-profile: sRGB;
