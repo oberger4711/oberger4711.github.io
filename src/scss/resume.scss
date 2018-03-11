@@ -24,7 +24,18 @@ $green:     #859900;
     body {
         background-color:$rebase03;
     }
-    h1,h2,h3,h4,h5,h6 {
+    .list-group-item, .list-group-item:visited {
+        background-color:$rebase03;
+        border: 0px;
+    }
+    .list-group-item:first-child, .list-group-item:last-child {
+        border-radius: 0;
+    }
+    .list-group-item:hover, {
+        background-color:$rebase02;
+    }
+
+    h1,h2,h3,h4,h5,h6,h2>* {
         color:$highlight;
         //font-family: 'Slabo 27px', serif;
         font-family: 'Inconsolata', monospace;
@@ -36,7 +47,7 @@ $green:     #859900;
     a, a:active, a:visited {
         color: $rebase1;
     }
-    a.active {
+    a.active, a.active > * {
         color: $highlight;
     }
     a:hover {

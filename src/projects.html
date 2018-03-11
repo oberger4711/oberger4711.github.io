@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ole Berger</title>
+		<meta charset="utf-8">
+		<!-- Bootstrap stuff -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="css/resume.css">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+		<style>
+		</style>
+	</head>
+	<body>
+        <div class="container" id="nav_bar">
+		</div>
+        <script>
+            $(document).ready(function() {
+                $("#nav_bar").load("navbar.html");
+                $(document).ready(function() {
+                    $("#nav_projects").addClass("active"); // Highlight the current menu entry.
+                });
+            });
+        </script>
+
+		<hr />
+
+        <div class="container" id="content">
+            <h2>Projects</h2>
+            This is a collection of some of my free-time projects.
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Android Game 'Maniac Runner'</h5>
+                        <small>March, 2018</small>
+                    </div>
+                    <p>
+                        This is a fast retro-style runner game for Android phones.
+                        It is available in Google Play Store.
+                        I wrote it during the examination periods.
+                    </p>
+                </a>
+                <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Autonomous Model Car with KITcar</h5>
+                        <small>February, 2018</small>
+                    </div>
+                    <p>
+                        KITcar is a university group of ~30 students (and only students) that develops a model car to enter the 'Carolo-Cup' competition.
+                        Our team won the 'Advanced Class' competition in 2018.
+                        <!--Equipped with a camera, an Intel NUC and more sensors and electronics, the vehicle has to -->
+                    </p>
+                </a>
+                <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Game Jam 'Beansjam'</h5>
+                        <small>May, 2017</small>
+                    </div>
+                    <p>
+                        Beansjam was a 48 h game developement competition that I joined together with my sister.
+                        Our HTML 5 game ranked #20 of 116 entries and received an award.
+                    </p>
+                </a>
+                <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Four-Legged Robot</h5>
+                        <small>October, 2015</small>
+                    </div>
+                    <p>
+                        I built and programmed a very simple four legged robot that can walk, turn, sit down and stand up.
+                        I implemented a simulation of the robot's kinematics and dynamics to optimize the walking motion in order to keep the center of mass inside the support polygon.
+                        TDD is used for the whole project.
+                    </p>
+                </a>
+            </div>
+        </div>
+
+	</body>
+</html>
+
