@@ -11,6 +11,7 @@
 
 		<link rel="stylesheet" href="css/resume.css">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+        <script src="js/navbar.js"></script>
 		<style>
 		</style>
 	</head>
@@ -18,19 +19,14 @@
         <div class="container" id="nav_bar">
 		</div>
         <script>
-            $(document).ready(function() {
-                $("#nav_bar").load("navbar.html");
-                $(document).ready(function() {
-                    $("#nav_contact").addClass("active"); // Highlight the current menu entry.
-                });
-            });
+            setActiveNavEntry("#nav_contact");
         </script>
 
 		<hr />
 
         <div class="container" id="content">
             <h2>Contact</h2>
-            Maybe do not provide and email?
+            Maybe do not provide any email?
         </div>
 
 	</body>

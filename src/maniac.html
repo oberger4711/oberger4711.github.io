@@ -11,8 +11,6 @@
 
 		<link rel="stylesheet" href="css/resume.css">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
-        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-        <script src="js/navbar.js"></script>
 		<style>
 		</style>
 	</head>
@@ -20,20 +18,22 @@
         <div class="container" id="nav_bar">
 		</div>
         <script>
-            setActiveNavEntry("#nav_home");
+            $(document).ready(function() {
+                $("#nav_bar").load("navbar.html");
+                $(document).ready(function() {
+                    $("#nav_projects").addClass("active"); // Highlight the current menu entry.
+                });
+            });
         </script>
 
 		<hr />
 
-        <div class="jumbotron">
-            <div class="container text-center">
-                <h1>My Portfolio</h1>
-                <p>Some text that represents "Me"...</p>
-            </div>
-        </div>
         <div class="container" id="content">
-            <h2>Title</h2>
-        </div>
-	</body>
-</html>
+            <h2>Maniac Runner</h2>
+            <p>
+            This is a runner game for Android <a href="https://play.google.com/store/apps/details?id=de.oberger.maniac">released in the Google Play Store</a>.
 
+            </p>
+        </div>
+    </body>
+</html>

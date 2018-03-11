@@ -11,6 +11,7 @@
 
 		<link rel="stylesheet" href="css/resume.css">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+        <script src="js/navbar.js"></script>
 		<style>
 		</style>
 	</head>
@@ -18,29 +19,26 @@
         <div class="container" id="nav_bar">
 		</div>
         <script>
-            $(document).ready(function() {
-                $("#nav_bar").load("navbar.html");
-                $(document).ready(function() {
-                    $("#nav_projects").addClass("active"); // Highlight the current menu entry.
-                });
-            });
+            setActiveNavEntry("#nav_projects");
         </script>
 
 		<hr />
 
         <div class="container" id="content">
             <h2>Projects</h2>
-            This is a collection of some of my free-time projects.
+            <p>
+                This is a collection of some of my free-time projects.
+            </p>
             <div class="list-group">
-                <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
+                <a class="list-group-item list-group-item-action flex-column align-items-start" href="maniac.html">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Android Game 'Maniac Runner'</h5>
                         <small>March, 2018</small>
                     </div>
                     <p>
                         This is a fast retro-style runner game for Android phones.
-                        It is available in Google Play Store.
-                        I wrote it during the examination periods.
+                        It features 40 levels over 7 themes; each theme with fresh game mechanics, music and look.
+                        The app is available in Google Play Store.
                     </p>
                 </a>
                 <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
@@ -49,8 +47,8 @@
                         <small>February, 2018</small>
                     </div>
                     <p>
-                        KITcar is a university group of ~30 students (and only students) that develops a model car to enter the 'Carolo-Cup' competition.
-                        Our team won the 'Advanced Class' competition in 2018.
+                        KITcar is a university group of ~30 students (and only students) that develops a model car to enter the Carolo-Cup competition.
+                        Our team won the Advanced-Class Carolo-Cup competition in 2018.
                         <!--Equipped with a camera, an Intel NUC and more sensors and electronics, the vehicle has to -->
                     </p>
                 </a>
@@ -61,7 +59,7 @@
                     </div>
                     <p>
                         Beansjam was a 48 h game developement competition that I joined together with my sister.
-                        Our HTML 5 game ranked #20 of 116 entries and received an award.
+                        Our HTML 5 game ranked #20 overall of 116 entries and received an award.
                     </p>
                 </a>
                 <a class="list-group-item list-group-item-action flex-column align-items-start" href="#">

@@ -15,46 +15,49 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3,$highlight) 
+@mixin rebase($clr_back,$clr_back_focus,$clr_content_a,$clr_content_b,$clr_content_c,$clr_content_d,$clr_back_inv_focus,$clr_back_inv,$highlight) 
 {
     * {
-        color:$rebase0;
-        border-color:$rebase0;
+        color:$clr_content_c;
+        border-color:$clr_content_c;
     }
     body {
-        background-color:$rebase03;
+        background-color:$clr_back;
     }
     .list-group-item, .list-group-item:visited {
-        background-color:$rebase03;
+        background-color:$clr_back;
         border: 0px;
     }
     .list-group-item:first-child, .list-group-item:last-child {
         border-radius: 0;
     }
     .list-group-item:hover, {
-        background-color:$rebase02;
+        background-color:$clr_back_focus;
     }
 
     h1,h2,h3,h4,h5,h6,h2>* {
         color:$highlight;
-        //font-family: 'Slabo 27px', serif;
         font-family: 'Inconsolata', monospace;
+        //font-family: 'Slabo 27px', serif;
         //font-family: 'VT323', monospace;
     }
     h2 {
-        border-bottom:1px solid $rebase0;
+        border-bottom:1px solid $clr_content_c;
     }
     a, a:active, a:visited {
-        color: $rebase1;
-    }
-    a.active, a.active > * {
         color: $highlight;
     }
+    a.active, a.active > * {
+        background-color:$clr_back_focus;
+    }
     a:hover {
-        background-color: $rebase02;
+        //background-color: $clr_back_focus;
+    }
+    .nav-link:hover {
+        text-decoration: underline;
     }
     .jumbotron {
-        background-color: $rebase02;
+        background-color: $clr_back_focus;
     }
 }
 

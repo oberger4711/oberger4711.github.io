@@ -17,11 +17,11 @@
 .light h2 {
   border-bottom: 1px solid #657b83; }
 .light a, .light a:active, .light a:visited {
-  color: #586e75; }
-.light a.active, .light a.active > * {
   color: #b58900; }
-.light a:hover {
+.light a.active, .light a.active > * {
   background-color: #eee8d5; }
+.light .nav-link:hover {
+  text-decoration: underline; }
 .light .jumbotron {
   background-color: #eee8d5; }
 
@@ -43,11 +43,11 @@ html h1, html h2, html h3, html h4, html h5, html h6, html h2 > *, .dark h1, .da
 html h2, .dark h2 {
   border-bottom: 1px solid #839496; }
 html a, html a:active, html a:visited, .dark a, .dark a:active, .dark a:visited {
-  color: #93a1a1; }
-html a.active, html a.active > *, .dark a.active, .dark a.active > * {
   color: #268bd2; }
-html a:hover, .dark a:hover {
+html a.active, html a.active > *, .dark a.active, .dark a.active > * {
   background-color: #073642; }
+html .nav-link:hover, .dark .nav-link:hover {
+  text-decoration: underline; }
 html .jumbotron, .dark .jumbotron {
   background-color: #073642; }
 
