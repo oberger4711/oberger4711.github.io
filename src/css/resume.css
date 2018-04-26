@@ -1,5 +1,6 @@
 /* light is default mode, so pair with general html definition */
 .light * {
+  font-family: 'Open Sans', sans-serif;
   color: #657b83;
   border-color: #657b83; }
 .light body {
@@ -26,6 +27,7 @@
   background-color: #eee8d5; }
 
 html *, .dark * {
+  font-family: 'Open Sans', sans-serif;
   color: #839496;
   border-color: #839496; }
 html body, .dark body {

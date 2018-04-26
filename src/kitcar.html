@@ -10,7 +10,7 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" href="css/resume.css">
-		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323|Open+Sans" rel="stylesheet">
         <script src="js/navbar.js"></script>
 		<style>
 		</style>
@@ -37,8 +37,19 @@
             The team has to organize itself and is split into the 4 sub teams: Hardware, Perception, Navigation and Control.
             I was leader of the sub team Navigation which is responsible for path planning and decision making based on the environment information extracted by the Perception team.
             There are many interesting concepts implemented in the car.
-            Here are some from the Navigation team (presented very briefly).
             </p>
+            <p>
+            In the navigation team for example we have a path planning implementation that uses Least-Squares optimization and generates very smooth trajectories around different obstacle constellations.
+            Especially for the Carolo-Cup 2018 we also had to implement a lot of decision making for the many additional, lately introduced road elements such as crosswalks, no passing zone and many more.
+            We use a hierarchical state machine to react on the road elements based on an environment model that filters and verifies uncertain detections from the perception team.
+            </p>
+            <p>
+            The following video shows our run at Carolo-Cup 2018 in obstacle mode of the extended competition (which we won).
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5HZ6VQnKYWo?start=9282" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <!--TODO: Delete details about concepts-->
             <h3>Path Planning</h3>
             <p>
             We sample the approximated lane with so called 'gates'.
