@@ -27,18 +27,23 @@
         <div class="container" id="content">
             <h2>KITcar</h2>
             <p>
-            KITcar is a group of about 30 students at KIT that develop an autonomous model car to participate in the Carolo-Cup competition.
+            <a href="http://kitcar-team.de/">KITcar</a> is a group of about 30 students at KIT that develop an autonomous model car in their free time to participate in the Carolo-Cup competition.
             Carolo-Cup is a competition of student teams from germany and other countries as well, organized by TU Braunschweig.
             Each team develops a car that handles a parkour with different real-world challenges such as parking, turning, overtaking obstacles or following them in no-passing areas and giving way to cars and pedestrians at intersections, barred areas, crosswalks.
             </p>
 
             <p>
             I joined the KITcar team right when I started my first master semester at KIT.
+            I learnt a lot there and not only about technical stuff such as working with libraries such as ROS, Eigen, Ceres etc.
+            What I found especially interesting is that there are only students working on the project.
+            TODO.
+            This differs greatly from my experience as a student worker where I would work on a project by myself and report back to one person.
+            On the one hand there are members that would invest around 2 hours per week in the project and on the other hand there are those who seem to do nothing else than working at KITcar.
             The team has to organize itself and is split into the 4 sub teams: Hardware, Perception, Navigation and Control.
             I was leader of the sub team Navigation which is responsible for path planning and decision making based on the environment information extracted by the Perception team.
-            There are many interesting concepts implemented in the car.
             </p>
             <p>
+            There are many interesting concepts implemented in the car.
             In the navigation team for example we have a path planning implementation that uses Least-Squares optimization and generates very smooth trajectories around different obstacle constellations.
             Especially for the Carolo-Cup 2018 we also had to implement a lot of decision making for the many additional, lately introduced road elements such as crosswalks, no passing zone and many more.
             We use a hierarchical state machine to react on the road elements based on an environment model that filters and verifies uncertain detections from the perception team.
@@ -49,20 +54,6 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5HZ6VQnKYWo?start=9282" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <!--TODO: Delete details about concepts-->
-            <h3>Path Planning</h3>
-            <p>
-            We sample the approximated lane with so called 'gates'.
-            A gate is a pair of end points that the vehicle has to drive through in between.
-            They are constructed along the driving distance and perpendicular to the lane.
-            Obstacles are cut out from the gates with an additional safety margin and the left lane is only included in cases of overtaking.
-            </p>
-            <img src="img/corridor_path.png" class="img-fluid mx-auto d-block" alt="Responsive image">
-            <br/>
-            <p>
-            The path is now modeled as a polygonal line through a single point on every gate.
-            The position of this point on the gate is optimized using Least Squares with a few cost functions to get a short, smooth and overall fast path through the parkour.
-            </p>
         </div>
 
 	</body>
