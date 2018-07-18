@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ole Berger</title>
+		<meta charset="utf-8">
+		<!-- Bootstrap stuff -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="css/resume.css">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+		<style>
+		</style>
+	</head>
+	<body>
+        <div class="container" id="nav_bar">
+		</div>
+        <script>
+            $(document).ready(function() {
+                $("#nav_bar").load("navbar.html");
+                $(document).ready(function() {
+                    $("#nav_projects").addClass("active"); // Highlight the current menu entry.
+                });
+            });
+        </script>
+
+		<hr />
+
+        <div class="container" id="content">
+            <h2>vstab</h2>
+            <p>
+                This is a simple video stabilizer developed on a week-end using OpenCV and Ceres available at <a href="https://github.com/oberger4711/vstab">Github</a>.
+                The idea came up because my friend who is editing our skatevideos complained about the post-processing stabilizer implemented in Adobe Premiere.
+                It did not allow the camera to pan or move in any way.
+                I thought this may be a good opportunity to get more familiar with OpenCV and implemented the following algorithm.
+                I started off with a quick prototype in python to see if the idea may actually work out.
+                For the non-linear LS optimization, I switched to C++ to be able to use the powerful Ceres library which I was already familiar with.
+                Because OpenCV has interfaces for both language this was no problem at all.
+            </p>
+            <h3>Pipeline</h3>
+            <p>
+                The following algorithm is implemented:
+                <ol>
+                    <li>Detect keypoints and descriptors with SIFT in each frame.</li>
+                    <li>Estimate homography transformation between two consecutive frames using RANSAC to find keypoint correspondencies.
+                        The transformation can be undone which ideally results in video of no camera motion.</li>
+                    <li>Smoothen camera motion by regressing a translation for each frame using non-linear Least Squares.
+                        The following two costs are minimized in the process:
+                        <ol>
+                            <li>Centered: The difference of the translation to the actual position of the frame estimated using the keypoint correspondencies.</li>
+                            <li>Smoothed: The difference in the steps from the translation of the previous frame and to the translation of the next frame.</li>
+                        </ol>
+                    </li>
+                    <li>Apply the transformation from 2. and 3.</li>
+                    <li>Crop the frames to the largest rectangle with the original aspect ratio that always contains content.</li>
+                </ol>
+                The only parameter of the algorithm is a smoothing factor that amplifies the costs of 3ii.
+                This is effectively a trade-of between a smooth camera motion and a low loss of pixels in the following cropping step.
+                The user can tune it to achieve the desired strength of smoothing for his application.
+            </p>
+            <p>
+                In contrast to fitting a parametric model to the data such as a line or a polygon, this approach is able to smooth any camera trajectory.
+                Moreover, having only a single parameter makes the program really easy to use.
+            </p>
+            <img src="img/vstab.png" class="img-fluid mx-auto d-block" alt="vstab visualization">
+            </br>
+            <p>
+                This is shown in the screenshot:
+            </p>
+            <ul>
+                <li>Blue: Correspondencies between keypoints of the current and the following frame (RANSAC is robust against outliers)</li>
+                <li>Green: Original camera motion trajectory estimated from keypoint correspondences</li>
+                <li>Red: Smoothed camera motion trajectory minimizing the cost functions (smoothness controlled by the smoothing factor)</li>
+            </ul>
+        </div>
+    </body>
+</html>

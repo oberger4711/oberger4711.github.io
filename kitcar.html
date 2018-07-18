@@ -34,9 +34,8 @@
 
             <p>
             I joined the KITcar team right when I started my first master semester at KIT.
-            I learnt a lot there and not only about technical stuff such as working with libraries such as ROS, Eigen, Ceres etc.
+            I learnt a lot there and not only about technical stuff such as working with libraries such as ROS, Eigen, Ceres, OpenCV etc.
             What I found especially interesting is that there are only students working on the project.
-            TODO.
             This differs greatly from my experience as a student worker where I would work on a project by myself and report back to one person.
             On the one hand there are members that would invest around 2 hours per week in the project and on the other hand there are those who seem to do nothing else than working at KITcar.
             The team has to organize itself and is split into the 4 sub teams: Hardware, Perception, Navigation and Control.
@@ -47,6 +46,11 @@
             In the navigation team for example we have a path planning implementation that uses Least-Squares optimization and generates very smooth trajectories around different obstacle constellations.
             Especially for the Carolo-Cup 2018 we also had to implement a lot of decision making for the many additional, lately introduced road elements such as crosswalks, no passing zone and many more.
             We use a hierarchical state machine to react on the road elements based on an environment model that filters and verifies uncertain detections from the perception team.
+            </p>
+            <p>
+            For the next Carolo-Cup 2019 we planned a more sophisticated environment model that fuses the information of the camera and an additional RGBD sensor over the time.
+            We hope to improve the robustness of our decision-making algorithms further using this approach.
+            Also we want to design the state machine more flexible for miss detections.
             </p>
             <p>
             The following video shows our run at Carolo-Cup 2018 in obstacle mode of the extended competition (which we won).
