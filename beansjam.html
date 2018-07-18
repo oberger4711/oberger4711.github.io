@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ole Berger</title>
+		<meta charset="utf-8">
+		<!-- Bootstrap stuff -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="css/resume.css">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+		<style>
+		</style>
+	</head>
+	<body>
+        <div class="container" id="nav_bar">
+		</div>
+        <script>
+            $(document).ready(function() {
+                $("#nav_bar").load("navbar.html");
+                $(document).ready(function() {
+                    $("#nav_projects").addClass("active"); // Highlight the current menu entry.
+                });
+            });
+        </script>
+
+		<hr />
+
+        <div class="container" id="content">
+            <h2>Beansjam</h2>
+            <p>
+                I participated in this 48 h game developement competition together with my sister.
+                She made the graphics while I did the programming.
+                The theme 'space mafia' was announced at the start of the competition.
+            </p>
+            <p>
+                I have already participated in two other 48 h game jams before.
+                In my opinion, the key for a good game that actually gets finished is implementing an idea that is both simple and innovative.
+                Moreover I wanted the game to run in any modern browser without having to download anything.
+                This greatly increases the probability that people actually play the game if they are interested.
+                Therefore I wrote a pure HTML5 game.
+                For programming I used Typescript.
+                This is a object-oriented script language that transpiles to Javascript and makes it easier for people like me that are more familiar with languages like C# than with Javascript.
+                I also used Phaser as an engine.
+                This makes it easy to quickly get a prototype running.
+                For example, nice tweening animations can be implemented in a single line.
+            </p>
+            <p>
+                The final game can be played <a href="http://jams.gamejolt.io/beansjam/games/miese-attentaeter/257485">here</a>.
+            </p>
+        </div>
+    </body>
+</html>
