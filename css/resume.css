@@ -3,26 +3,42 @@
   font-family: 'Open Sans', sans-serif;
   color: #657b83;
   border-color: #657b83; }
+
 .light body {
   background-color: #fdf6e3; }
+
 .light .list-group-item, .light .list-group-item:visited {
   background-color: #fdf6e3;
   border: 0px; }
+
 .light .list-group-item:first-child, .light .list-group-item:last-child {
   border-radius: 0; }
+
 .light .list-group-item:hover {
   background-color: #eee8d5; }
+
 .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light h2 > * {
   color: #b58900;
   font-family: 'Inconsolata', monospace; }
+
 .light h2 {
   border-bottom: 1px solid #657b83; }
+
+.light .table td, .light .table th {
+  border-top: None; }
+
+.light .table td {
+  text-align: center; }
+
 .light a, .light a:active, .light a:visited {
   color: #b58900; }
+
 .light a.active, .light a.active > * {
   background-color: #eee8d5; }
+
 .light .nav-link:hover {
   text-decoration: underline; }
+
 .light .jumbotron {
   background-color: #eee8d5; }
 
@@ -30,31 +46,45 @@ html *, .dark * {
   font-family: 'Open Sans', sans-serif;
   color: #839496;
   border-color: #839496; }
+
 html body, .dark body {
   background-color: #002b36; }
+
 html .list-group-item, html .list-group-item:visited, .dark .list-group-item, .dark .list-group-item:visited {
   background-color: #002b36;
   border: 0px; }
+
 html .list-group-item:first-child, html .list-group-item:last-child, .dark .list-group-item:first-child, .dark .list-group-item:last-child {
   border-radius: 0; }
+
 html .list-group-item:hover, .dark .list-group-item:hover {
   background-color: #073642; }
+
 html h1, html h2, html h3, html h4, html h5, html h6, html h2 > *, .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark h2 > * {
   color: #268bd2;
   font-family: 'Inconsolata', monospace; }
+
 html h2, .dark h2 {
   border-bottom: 1px solid #839496; }
+
+html .table td, html .table th, .dark .table td, .dark .table th {
+  border-top: None; }
+
+html .table td, .dark .table td {
+  text-align: center; }
+
 html a, html a:active, html a:visited, .dark a, .dark a:active, .dark a:visited {
   color: #268bd2; }
+
 html a.active, html a.active > *, .dark a.active, .dark a.active > * {
   background-color: #073642; }
+
 html .nav-link:hover, .dark .nav-link:hover {
   text-decoration: underline; }
+
 html .jumbotron, .dark .jumbotron {
   background-color: #073642; }
 
 html * {
   color-profile: sRGB;
   rendering-intent: auto; }
-
-/*# sourceMappingURL=resume.css.map */

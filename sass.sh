@@ -1,2 +1,2 @@
 #!/bin/bash
-sass --watch src/scss/resume.scss:src/css/resume.css
+node-sass --watch --output css scss/resume.scss

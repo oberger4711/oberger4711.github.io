@@ -45,6 +45,12 @@ $green:     #859900;
     h2 {
         border-bottom:1px solid $clr_content_c;
     }
+    .table td, .table th {
+        border-top: None
+    }
+    .table td {
+        text-align: center;   
+    }
     a, a:active, a:visited {
         color: $highlight;
     }
