@@ -84,10 +84,9 @@
                 The final version also features two LEDs indicating the system state and a button for toggling the state and also for shutting down the Raspberry Pi when held down for 3 s.
             </p>
 
-            <h3>Software</h3>
+            <h3>Perception</h3>
             <p>
-                ROS is used as framework with nodes in C++ and Python.
-                As camera driver, I reused an existing open-source node.
+                As camera driver, I reused an existing open-source ROS node for the Raspberry Pi camera.
             </p>
             <p>
                 I use the OpenCV face detection based on Haar cascades.
@@ -103,6 +102,7 @@
                 When the track is lost, the system switches back to detection.
                 Tracking is much faster than detecting and makes it possible to control smoothly with 40 Hz.
             </p>
+            <h3>Control</h3>
             <p>
                 For controlling the servos, I use a PI controller.
                 The error for pan and tilt is equal to the X and Y distance of the detection center to the image center respectively.
@@ -112,6 +112,7 @@
                 As soon as the control errors are small enough, the third servo pulls the trigger.
             </p>
             <img src="img/nerf2face_poti.jpg" class="img-fluid mx-auto d-block" alt="Hacked servo">
+            <h3>Motion Planning</h3>
             <p>
                 For planning open-loop motions as used for the calibration routine and for parking the head (returning to forward-looking orientation), I implemented a simple motion planning using splines.
                 Motions consist of an constant-acceleration phase, a constant-velocity phase and a constant-breaking phase.
