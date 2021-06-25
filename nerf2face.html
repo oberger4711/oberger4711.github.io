@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Ole Berger - nerf2face</title>
+		<title>Ole Berger - Nerf Gun Robot</title>
 		<meta charset="utf-8">
 		<!-- Bootstrap stuff -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,12 +29,20 @@
 		<hr />
 
         <div class="container" id="content">
-            <h2>nerf2face</h2>
-            (Video coming soon)
+            <h2>Nerf Gun Robot</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                          <img src="img/nerf2face_cam.gif" class="img-fluid" alt="...">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <p>
-                This is a robot that shoots a nerf gun in your face.
+                This is a robot that shoots a Nerf gun in your face.
                 Code is available at <a href="https://github.com/oberger4711/nerf2face">Github</a>.
-                I got the idea because my colleagues played around with nerf guns at the office.
+                I got the idea because my colleagues played around with Nerf guns at the office.
             </p>
             <h3>Hardware</h3>
             <p>
@@ -84,7 +92,7 @@
                 The final version also features two LEDs indicating the system state and a button for toggling the state and also for shutting down the Raspberry Pi when held down for 3 s.
             </p>
 
-            <h3>Perception</h3>
+            <h3>Face Detection & Tracking</h3>
             <p>
                 As camera driver, I reused an existing open-source ROS node for the Raspberry Pi camera.
             </p>
@@ -102,6 +110,20 @@
                 When the track is lost, the system switches back to detection.
                 Tracking is much faster than detecting and makes it possible to control smoothly with 40 Hz.
             </p>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                          <img src="img/nerf2face_rqt.gif" class="img-fluid" alt="...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          RQT visualization of face tracking and control
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <h3>Control</h3>
             <p>
                 For controlling the servos, I use a PI controller.
