@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ole Berger - DQN Implementation</title>
+		<meta charset="utf-8">
+		<!-- Bootstrap stuff -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="css/resume.css">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Slabo+27px|VT323" rel="stylesheet">
+		<style>
+		</style>
+	</head>
+	<body>
+        <div class="container" id="nav_bar">
+		</div>
+        <script>
+            $(document).ready(function() {
+                $("#nav_bar").load("navbar.html");
+                $(document).ready(function() {
+                    $("#nav_projects").addClass("active"); // Highlight the current menu entry.
+                });
+            });
+        </script>
+
+		<hr />
+
+        <div class="container" id="content">
+            <h2>Reinforcement Learning with DQN (WIP)</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                          <img src="img/tetris.gif" class="img-fluid" alt="...">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                I implemented the Deep Q Learning algorithm proposed by Google DeepMind based on their paper.
+                <a href="https://github.com/oberger4711/rl-tf2">The code is available on GitHub.</a>
+                For evaluation I used OpenAI gym, which is a Python package with many different environments that can be used via a common interface.
+                This allows developers to test the same algorithm easily in different environments without many changes.
+                Furthermore I added a new Tetris environment.
+            </p>
+            <h3>DQN Algorithm</h3>
+            <p>
+                By approximating the Bellman equation, the DQN algorithm trains a neural network to estimate Q values of any possible action given the current state of the environment.
+                Mechanisms like the replay memory buffer and decoupling of the target Q value estimation add to the stability of the training.
+                See the papers for more details.
+            </p>
+            <h3>Tetris Environment</h3>
+            <p>
+                With the current implementation, the trained agent is able to play decently as can be seen in the GIF above.
+                However he often places pieces in a way, that produces holes which are disadvantageous for the further game.
+            </p>
+        </div>
+    </body>
+</html>
